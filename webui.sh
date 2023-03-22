@@ -23,7 +23,7 @@ fi
 # Install directory without trailing slash
 if [[ -z "${install_dir}" ]]
 then
-    install_dir="/home/$(whoami)"
+    install_dir="$(pwd)"
 fi
 
 # Name of the subdirectory (defaults to stable-diffusion-webui)
@@ -90,7 +90,7 @@ then
     exit 1
 else
     printf "\n%s\n" "${delimiter}"
-    printf "Running on \e[1m\e[32m%s\e[0m user" "$(whoami)"
+    printf "Running on \e[1m\e[32m%s\e[0m user" "$(pwd)"
     printf "\n%s\n" "${delimiter}"
 fi
 
